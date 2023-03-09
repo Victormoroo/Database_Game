@@ -4254,7 +4254,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
-		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet
+		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
+		C3.Plugins.AJAX.Acts.Post
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4295,6 +4296,7 @@ self.C3_JsPropNameTable = [
 	{spriteContador: 0},
 	{blackBg2: 0},
 	{SpriteFont2: 0},
+	{SpriteFont3: 0},
 	{vidas: 0},
 	{cronometro: 0}
 ];
@@ -4440,7 +4442,14 @@ self.C3_ExpressionFuncs = [
 		() => "PORTA",
 		() => 2,
 		() => "fechando",
-		() => "SOU BRABO DEMAIS!!..."
+		() => "SOU BRABO DEMAIS!!...",
+		() => "BD",
+		() => "https://banco-gol-default-rtdb.firebaseio.com/contador.json",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (and((("{\"" + "Contador") + "\":"), (60 - v0.GetValue())) + "}");
+		},
+		() => "POST"
 ];
 
 

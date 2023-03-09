@@ -4289,14 +4289,13 @@ self.C3_JsPropNameTable = [
 	{itensHUD: 0},
 	{blackBg: 0},
 	{playerDialogo: 0},
-	{SpriteFont: 0},
+	{spritePlayerFala: 0},
 	{chefao: 0},
 	{Audio: 0},
 	{AJAX: 0},
 	{spriteContador: 0},
 	{blackBg2: 0},
-	{SpriteFont2: 0},
-	{SpriteFont3: 0},
+	{spriteInicio: 0},
 	{vidas: 0},
 	{cronometro: 0}
 ];
@@ -4444,7 +4443,7 @@ self.C3_ExpressionFuncs = [
 		() => "fechando",
 		() => "SOU BRABO DEMAIS!!...",
 		() => "BD",
-		() => "https://banco-gol-default-rtdb.firebaseio.com/contador.json",
+		() => "https://bancogol-3c004-default-rtdb.firebaseio.com/contador.json",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (and((("{\"" + "Contador") + "\":"), (60 - v0.GetValue())) + "}");
